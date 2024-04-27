@@ -81,7 +81,7 @@ class PauseSubState extends MusicBeatSubstate
 		var pauseImage:FlxSprite = new FlxSprite().loadGraphic(Paths.image('other/pauce_menuy'));
 		pauseImage.updateHitbox();
 		pauseImage.scrollFactor.set();
-		pauseImage.x = 340;
+		pauseImage.x = 290;
 		add(pauseImage);
 
 		var levelInfo:FlxText = new FlxText(20, 15, 0, PlayState.SONG.song, 32);
@@ -133,7 +133,7 @@ class PauseSubState extends MusicBeatSubstate
 		blueballedTxt.x = FlxG.width - (blueballedTxt.width + 20);
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
-		FlxTween.tween(pauseImage, {alpha: 1, x: 40}, 0.8, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(pauseImage, {alpha: 1, x: 40}, 0.6, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 		FlxTween.tween(blueballedTxt, {alpha: 1, y: blueballedTxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});

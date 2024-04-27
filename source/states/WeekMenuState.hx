@@ -13,6 +13,10 @@ import states.PlayState;
 import states.StoryMenuState;
 import states.FreeplayState;
 
+import substates.GameplayChangersSubstate;
+import substates.ResetScoreSubState;
+
+import flixel.effects.FlxFlicker;
 
 class WeekMenuState extends MusicBeatState
 {
@@ -77,39 +81,53 @@ class WeekMenuState extends MusicBeatState
         {
             if (controls.BACK)
                 MusicBeatState.switchState(new MainMenuState());
-
             if (controls.UI_LEFT_P)
                 changeItem(-1);
-
             if (controls.UI_RIGHT_P)
                 changeItem(1);
             if (controls.ACCEPT)
                 startWeek();
+
+            if(FlxG.keys.justPressed.CONTROL){
+                persistentUpdate = false;
+                openSubState(new GameplayChangersSubstate());
+            }
             super.update(elapsed);
         }
         function startWeek():Void {
             // Check if the currently selected menu item is "Week 1"
-            if (curSelected == 0) {
-                PlayState.storyDifficulty = 0;
-                PlayState.storyPlaylist = ['big-business', 'loan', 'trap'];
-                PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
-                PlayState.campaignScore = 0;
-                PlayState.campaignMisses = 0;
-                LoadingState.loadAndSwitchState(new PlayState(), true);
-                PlayState.isWeekMode = true;
-                FreeplayState.destroyFreeplayVocals();
-            }
-             
-            if (curSelected == 1) {
-                PlayState.storyDifficulty = 0;
-                PlayState.storyPlaylist = ['weird', 'camp', 'betrayal'];
-                PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-normal', PlayState.storyPlaylist[0].toLowerCase());
-                PlayState.campaignScore = 0;
-                PlayState.campaignMisses = 0;
-                LoadingState.loadAndSwitchState(new PlayState(), true);
-                PlayState.isWeekMode = true;
-                FreeplayState.destroyFreeplayVocals();
-            }
+
+            FlxG.sound.play(Paths.sound('confirmMenu'));
+
+            FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
+                {
+                    if (curSelected == 0) {
+
+                                LoadingState.loadAndSwitchState(new PlayState(), true);
+                                PlayState.storyDifficulty = 0;
+                                PlayState.storyPlaylist = ['big-business', 'loan', 'trap'];
+                                PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
+                                PlayState.campaignScore = 0;
+                                PlayState.campaignMisses = 0;
+                                PlayState.isWeekMode = true;
+                                FreeplayState.destroyFreeplayVocals();
+        
+                    }
+                     
+                    if (curSelected == 1) {
+
+                                LoadingState.loadAndSwitchState(new PlayState(), true);
+                                PlayState.storyDifficulty = 0;
+                                PlayState.storyPlaylist = ['weird', 'camp', 'betrayal'];
+                                PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-normal', PlayState.storyPlaylist[0].toLowerCase());
+                                PlayState.campaignScore = 0;
+                                PlayState.campaignMisses = 0;
+                                PlayState.isWeekMode = true;
+                                FreeplayState.destroyFreeplayVocals();
+
+                    }
+                });
+  
         }
         
 

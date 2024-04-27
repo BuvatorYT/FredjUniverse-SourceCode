@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="textlol.png">
+<SubTexture name="txt0000" x="0" y="0" width="624" height="296" frameX="0" frameY="0" frameWidth="624" frameHeight="296" />
+<SubTexture name="FUCK0000" x="0" y="0" width="624" height="296" frameX="0" frameY="0" frameWidth="624" frameHeight="296" />
+</TextureAtlas>

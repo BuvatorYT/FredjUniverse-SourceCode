@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				19,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				19,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				16,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				19,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				19,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/p1zdabol",
+	"position": [
+		0,
+		120
+	],
+	"healthicon": "p1zdabol",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		213,
+		176
+	],
+	"camera_position": [
+		-50,
+		-150
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

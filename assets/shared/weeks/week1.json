@@ -1,0 +1,50 @@
+{
+	"storyName": "BIG-BON",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "bb",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"big-business",
+			"big-bon",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"loan",
+			"big-bon",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"trap",
+			"big-bon",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"bigbon",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week 1"
+}

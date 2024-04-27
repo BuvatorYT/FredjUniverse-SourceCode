@@ -1,0 +1,11 @@
+{
+	"idle_anim": "w idle",
+	"image": "Menu_Week3",
+	"position": [
+		490,
+		0
+	],
+	"flipX": false,
+	"scale": 1,
+	"confirm_anim": "w hey"
+}

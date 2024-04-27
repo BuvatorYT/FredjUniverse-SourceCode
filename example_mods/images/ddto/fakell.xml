@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fakell.png">
+	<!-- Created with Adobe Animate version 23.0.1.70 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fakell0000" x="20" y="20" width="1920" height="1080" frameX="0" frameY="0" frameWidth="1920" frameHeight="1083"/>
+	<SubTexture name="fakell0001" x="20" y="20" width="1920" height="1080" frameX="0" frameY="0" frameWidth="1920" frameHeight="1083"/>
+	<SubTexture name="fakell0002" x="20" y="20" width="1920" height="1080" frameX="0" frameY="0" frameWidth="1920" frameHeight="1083"/>
+	<SubTexture name="fakell0003" x="1960" y="20" width="1920" height="1080" frameX="0" frameY="0" frameWidth="1920" frameHeight="1083"/>
+	<SubTexture name="fakell0004" x="1960" y="20" width="1920" height="1080" frameX="0" frameY="0" frameWidth="1920" frameHeight="1083"/>
+	<SubTexture name="fakell0005" x="1960" y="20" width="1920" height="1080" frameX="0" frameY="0" frameWidth="1920" frameHeight="1083"/>
+	<SubTexture name="fakell0006" x="20" y="1120" width="1920" height="1080" frameX="0" frameY="-3" frameWidth="1920" frameHeight="1083"/>
+	<SubTexture name="fakell0007" x="20" y="1120" width="1920" height="1080" frameX="0" frameY="-3" frameWidth="1920" frameHeight="1083"/>
+	<SubTexture name="fakell0008" x="20" y="1120" width="1920" height="1080" frameX="0" frameY="-3" frameWidth="1920" frameHeight="1083"/>
+</TextureAtlas>

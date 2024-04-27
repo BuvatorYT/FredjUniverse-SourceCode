@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				105,
+				8
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "singLEFT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				19,
+				2
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "singRIGHT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				205,
+				-11
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "singDOWN",
+			"indices": []
+		},
+		{
+			"offsets": [
+				38,
+				76
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": true,
+			"name": "singUP"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/sosiskaROFLS",
+	"position": [
+		0,
+		50
+	],
+	"healthicon": "icon-sosiskaROFLS",
+	"flip_x": true,
+	"healthbar_colors": [
+		250,
+		125,
+		42
+	],
+	"camera_position": [
+		30,
+		80
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

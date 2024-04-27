@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bb.png">
+<SubTexture name="bb idle0000" x="208" y="1190" width="209" height="268" frameX="-513" frameY="-103" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0001" x="417" y="1190" width="209" height="268" frameX="-513" frameY="-103" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0002" x="626" y="1190" width="210" height="267" frameX="-512" frameY="-104" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0003" x="1046" y="1190" width="210" height="266" frameX="-512" frameY="-105" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0004" x="1256" y="1190" width="210" height="266" frameX="-512" frameY="-105" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0005" x="1570" y="0" width="210" height="266" frameX="-512" frameY="-105" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0006" x="836" y="1190" width="210" height="267" frameX="-512" frameY="-104" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0007" x="0" y="1190" width="208" height="270" frameX="-514" frameY="-101" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0008" x="1360" y="857" width="203" height="274" frameX="-518" frameY="-97" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0009" x="1360" y="577" width="197" height="280" frameX="-522" frameY="-91" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0010" x="1360" y="292" width="196" height="285" frameX="-522" frameY="-86" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0011" x="1162" y="296" width="194" height="292" frameX="-523" frameY="-79" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0012" x="387" y="300" width="194" height="297" frameX="-523" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0013" x="386" y="0" width="193" height="299" frameX="-523" frameY="-72" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0014" x="0" y="0" width="193" height="300" frameX="-523" frameY="-71" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0015" x="193" y="0" width="193" height="300" frameX="-523" frameY="-71" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0016" x="579" y="0" width="193" height="299" frameX="-523" frameY="-72" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0017" x="0" y="300" width="193" height="299" frameX="-523" frameY="-72" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0018" x="193" y="300" width="194" height="298" frameX="-523" frameY="-73" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0019" x="772" y="0" width="194" height="297" frameX="-523" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb idle0020" x="772" y="297" width="194" height="297" frameX="-523" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0000" x="772" y="297" width="194" height="297" frameX="-523" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0001" x="0" y="599" width="194" height="297" frameX="-523" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0002" x="194" y="599" width="193" height="297" frameX="-524" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0003" x="387" y="599" width="193" height="297" frameX="-524" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0004" x="580" y="599" width="194" height="297" frameX="-523" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0005" x="966" y="0" width="196" height="297" frameX="-521" frameY="-74" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0006" x="1162" y="0" width="198" height="296" frameX="-519" frameY="-75" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0007" x="0" y="896" width="206" height="294" frameX="-511" frameY="-77" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0008" x="837" y="896" width="210" height="292" frameX="-507" frameY="-79" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0009" x="1047" y="896" width="211" height="292" frameX="-506" frameY="-79" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0010" x="206" y="896" width="211" height="293" frameX="-506" frameY="-78" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0011" x="417" y="896" width="210" height="293" frameX="-507" frameY="-78" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0012" x="627" y="896" width="210" height="293" frameX="-507" frameY="-78" frameWidth="1280" frameHeight="386" />
+<SubTexture name="bb hey0013" x="1360" y="0" width="210" height="292" frameX="-507" frameY="-79" frameWidth="1280" frameHeight="386" />
+</TextureAtlas>

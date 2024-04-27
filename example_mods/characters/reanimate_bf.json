@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-156,
+				62
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "bf2 idle dance"
+		},
+		{
+			"offsets": [
+				-142,
+				61
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "bf2 left note"
+		},
+		{
+			"offsets": [
+				-151,
+				49
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "bf2 down note"
+		},
+		{
+			"offsets": [
+				-167,
+				97
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "bf2 up note"
+		},
+		{
+			"offsets": [
+				-178,
+				64
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "bf2 right note"
+		},
+		{
+			"offsets": [
+				-153,
+				59
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "bf2 left miss"
+		},
+		{
+			"offsets": [
+				-135,
+				41
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "bf2 down miss"
+		},
+		{
+			"offsets": [
+				-156,
+				98
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "bf2 up miss"
+		},
+		{
+			"offsets": [
+				-164,
+				62
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "bf2 right miss"
+		},
+		{
+			"offsets": [
+				-151,
+				62
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "bf2 cheer"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/reanimate_bf",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		-130
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

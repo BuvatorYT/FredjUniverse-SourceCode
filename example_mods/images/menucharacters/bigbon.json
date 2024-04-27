@@ -1,0 +1,11 @@
+{
+	"idle_anim": "bb idle",
+	"image": "Menu_BigBon",
+	"position": [
+		482,
+		20
+	],
+	"flipX": false,
+	"scale": 1,
+	"confirm_anim": "bb hey"
+}

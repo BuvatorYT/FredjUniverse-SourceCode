@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dimond.png">
+	<!-- Created with Adobe Animate version 18.0.0.107 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="note splash space 10000" x="1146" y="305" width="382" height="304"/>
+	<SubTexture name="note splash space 10001" x="1528" y="305" width="382" height="304"/>
+	<SubTexture name="note splash space 10002" x="0" y="610" width="382" height="304"/>
+	<SubTexture name="note splash space 10003" x="382" y="610" width="382" height="304"/>
+	<SubTexture name="note splash space 20000" x="764" y="610" width="382" height="304"/>
+	<SubTexture name="note splash space 20001" x="1146" y="610" width="382" height="304"/>
+	<SubTexture name="note splash space 20002" x="1528" y="610" width="382" height="304"/>
+	<SubTexture name="note splash space 20003" x="0" y="914" width="382" height="304"/>
+</TextureAtlas>

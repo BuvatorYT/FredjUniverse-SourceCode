@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				60
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BFcoolidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				195,
+				74
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BFcoolleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				120,
+				29
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BFcooldown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				74,
+				137
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BFcoolup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				32,
+				73
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BFcoolright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				137,
+				80
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BFfailleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				115,
+				61
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BFfaildown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				74,
+				127
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "BFfailup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				66,
+				62
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BFfailright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				100,
+				80
+			],
+			"anim": "cooltrans",
+			"fps": 24,
+			"name": "BFcooltrans",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				76,
+				82
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BFcoolhey",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/HeV Boyfriend",
+	"position": [
+		140,
+		400
+	],
+	"healthicon": "hev-bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		80,
+		-130
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

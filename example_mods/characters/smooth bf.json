@@ -1,0 +1,219 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				170
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "dead",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-30,
+				170
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "dead"
+		},
+		{
+			"offsets": [
+				800,
+				1350
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "dead"
+		},
+		{
+			"offsets": [
+				-30,
+				170
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				-30,
+				170
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				-30,
+				170
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "miss"
+		},
+		{
+			"offsets": [
+				-30,
+				170
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "miss"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-110,
+				-81
+			],
+			"anim": "hurt",
+			"fps": 15,
+			"name": "hurt",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-60,
+				-260
+			],
+			"anim": "bozo",
+			"fps": 15,
+			"name": "bozo",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-110,
+				134
+			],
+			"anim": "lung cancer",
+			"fps": 15,
+			"name": "lung cancer",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-80,
+				20
+			],
+			"loop": true,
+			"fps": 15,
+			"anim": "o",
+			"indices": [
+				0,
+				1,
+				2
+			],
+			"name": "o"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 30,
+			"name": "idle",
+			"indices": [
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70
+			]
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/smooth bf",
+	"position": [
+		0,
+		460
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		190,
+		-250
+	],
+	"sing_duration": 5,
+	"scale": 2.2
+}

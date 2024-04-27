@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fredjUUU.png">
+	<!-- Created with Adobe Animate version 23.0.2.103 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fredjUUU0000" x="10" y="10" width="690" height="859" frameX="-9" frameY="-53" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0001" x="10" y="10" width="690" height="859" frameX="-9" frameY="-53" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0002" x="710" y="10" width="690" height="872" frameX="0" frameY="-40" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0003" x="710" y="10" width="690" height="872" frameX="0" frameY="-40" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0004" x="10" y="892" width="691" height="897" frameX="-6" frameY="-15" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0005" x="10" y="892" width="691" height="897" frameX="-6" frameY="-15" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0006" x="711" y="892" width="689" height="906" frameX="-31" frameY="-6" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0007" x="711" y="892" width="689" height="906" frameX="-31" frameY="-6" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0008" x="10" y="1808" width="687" height="912" frameX="-46" frameY="0" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0009" x="10" y="1808" width="687" height="912" frameX="-46" frameY="0" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0010" x="10" y="1808" width="687" height="912" frameX="-46" frameY="0" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0011" x="10" y="1808" width="687" height="912" frameX="-46" frameY="0" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0012" x="10" y="1808" width="687" height="912" frameX="-46" frameY="0" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0013" x="10" y="1808" width="687" height="912" frameX="-46" frameY="0" frameWidth="733" frameHeight="912"/>
+	<SubTexture name="fredjUUU0014" x="10" y="1808" width="687" height="912" frameX="-46" frameY="0" frameWidth="733" frameHeight="912"/>
+</TextureAtlas>

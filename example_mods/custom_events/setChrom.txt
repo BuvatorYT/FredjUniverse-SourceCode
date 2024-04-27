@@ -1,0 +1,5 @@
+set the chromatic aberration value
+only work on Finale, Grey Stage, and Boiling Point
+
+value 1 = amount of chromatic
+value 2 = timer

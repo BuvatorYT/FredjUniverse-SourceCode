@@ -1,0 +1,4 @@
+Flashes Camera
+
+Value 1: speed
+Value 2: alpha (0 - invisible, 1 - visible)

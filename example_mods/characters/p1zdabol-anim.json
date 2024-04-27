@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				-5
+			],
+			"anim": "idle",
+			"fps": 30,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				19,
+				-5
+			],
+			"anim": "anim",
+			"fps": 30,
+			"name": "anim",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/p1zdabol-anim",
+	"position": [
+		0,
+		120
+	],
+	"healthicon": "p1zdabol",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		213,
+		176
+	],
+	"camera_position": [
+		-40,
+		-100
+	],
+	"sing_duration": 4,
+	"scale": 1.4
+}

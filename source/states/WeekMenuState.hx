@@ -80,6 +80,7 @@ class WeekMenuState extends MusicBeatState
     override function update(elapsed:Float)
         {
             if (controls.BACK)
+                FlxG.sound.play(Paths.sound('cancelMenu'));
                 MusicBeatState.switchState(new MainMenuState());
             if (controls.UI_LEFT_P)
                 changeItem(-1);
@@ -98,34 +99,38 @@ class WeekMenuState extends MusicBeatState
             // Check if the currently selected menu item is "Week 1"
 
             FlxG.sound.play(Paths.sound('confirmMenu'));
+            FlxG.camera.flash(FlxColor.WHITE, 1);
 
-            FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
+            FlxFlicker.flicker(menuItems.members[curSelected], 1.5, 0.06, false, false, function(flick:FlxFlicker)
                 {
+
                     if (curSelected == 0) {
-
-                                LoadingState.loadAndSwitchState(new PlayState(), true);
-                                PlayState.storyDifficulty = 0;
-                                PlayState.storyPlaylist = ['big-business', 'loan', 'trap'];
-                                PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
-                                PlayState.campaignScore = 0;
-                                PlayState.campaignMisses = 0;
-                                PlayState.isWeekMode = true;
-                                FreeplayState.destroyFreeplayVocals();
-        
+                    
+                        LoadingState.loadAndSwitchState(new PlayState(), true);
+                        PlayState.storyDifficulty = 0;
+                        PlayState.storyPlaylist = ['big-business', 'loan', 'trap'];
+                        PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
+                        PlayState.campaignScore = 0;
+                        PlayState.campaignMisses = 0;
+                        PlayState.isWeekMode = true;
+                        FreeplayState.destroyFreeplayVocals();
+                    
                     }
-                     
+                    
                     if (curSelected == 1) {
-
-                                LoadingState.loadAndSwitchState(new PlayState(), true);
-                                PlayState.storyDifficulty = 0;
-                                PlayState.storyPlaylist = ['weird', 'camp', 'betrayal'];
-                                PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-normal', PlayState.storyPlaylist[0].toLowerCase());
-                                PlayState.campaignScore = 0;
-                                PlayState.campaignMisses = 0;
-                                PlayState.isWeekMode = true;
-                                FreeplayState.destroyFreeplayVocals();
-
+                    
+                        LoadingState.loadAndSwitchState(new PlayState(), true);
+                        PlayState.storyDifficulty = 0;
+                        PlayState.storyPlaylist = ['weird', 'camp', 'betrayal'];
+                        PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-normal', PlayState.storyPlaylist[0].toLowerCase());
+                        PlayState.campaignScore = 0;
+                        PlayState.campaignMisses = 0;
+                        PlayState.isWeekMode = true;
+                        FreeplayState.destroyFreeplayVocals();
+                    
                     }
+
+
                 });
   
         }

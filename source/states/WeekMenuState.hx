@@ -79,6 +79,7 @@ class WeekMenuState extends MusicBeatState
 
     override function update(elapsed:Float)
         {
+            if (controls.BACK){
                 FlxG.sound.play(Paths.sound('cancelMenu'));
                 MusicBeatState.switchState(new MainMenuState());
             }

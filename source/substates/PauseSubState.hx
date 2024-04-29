@@ -90,13 +90,13 @@ class PauseSubState extends MusicBeatSubstate
 		pauseImage2.x = 290;
 		add(pauseImage2);
 
-		var pauseImage3:FlsSprite = new FlxSprite().loadGraphic(Paths.image('other/Bomj'));
+		var pauseImage3:FlxSprite = new FlxSprite().loadGraphic(Paths.image('other/Bomj'));
 		pauseImage3.updateHitbox();
 		pauseImage3.scrollFactor.set();
 		pauseImage3.x = 290;
 		add(pauseImage3);
 
-		var pauseImage4:FlsSprite = new FlxSprite().loadGraphic(Paths.image('other/Ranaldo7 & Bomjik'));
+		var pauseImage4:FlxSprite = new FlxSprite().loadGraphic(Paths.image('other/Ranaldo7 & Bomjik'));
 		pauseImage4.updateHitbox();
 		pauseImage4.scrollFactor.set();
 		pauseImage4.x = 290;

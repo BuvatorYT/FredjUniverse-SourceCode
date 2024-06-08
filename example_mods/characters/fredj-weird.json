@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "idle",
-			"loop": false,
-			"name": "fd idle"
+			"fps": 30,
+			"name": "fd idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "fd left"
+			"fps": 30,
+			"name": "fd left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "fd right"
+			"fps": 30,
+			"name": "fd right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "fd down"
+			"fps": 30,
+			"name": "fd down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singUP",
-			"loop": false,
-			"name": "fd up"
+			"fps": 30,
+			"name": "fd up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singLEFT-alt",
-			"loop": false,
-			"name": "fd alt-left"
+			"fps": 30,
+			"name": "fd alt-left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singRIGHT-alt",
-			"loop": false,
-			"name": "fd alt-right"
+			"fps": 30,
+			"name": "fd alt-right",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
@@ -85,12 +85,12 @@
 		0,
 		0
 	],
-	"healthicon": "fredjk",
+	"healthicon": "icon-fredj",
 	"flip_x": false,
 	"healthbar_colors": [
-		2,
-		197,
-		194
+		1,
+		155,
+		154
 	],
 	"camera_position": [
 		-220,

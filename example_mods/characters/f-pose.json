@@ -1,20 +1,20 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"indices": [],
 			"fps": 30,
-			"name": "f idle",
-			"indices": []
+			"anim": "idle",
+			"loop": false,
+			"name": "fr idle"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/f-pose",
+	"image": "characters/fred-depnd",
 	"position": [
 		0,
 		0

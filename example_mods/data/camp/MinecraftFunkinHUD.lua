@@ -158,7 +158,7 @@ function onCreatePost()
   addLuaSprite('expempty', true)
   screenCenter('expempty', 'x')
 
-  makeLuaSprite('expfill', 'expbar/full', 0, baseCoords[2] + 10)
+  makeLuaSprite('expfill', 'expbar/full', 0, baseCoords[2] + 18)
   scaleObject('expfill', scalething, scalething)
   setObjectCamera('expfill', 'hud')
   setProperty('expfill.antialiasing', false)
@@ -174,7 +174,7 @@ function onCreatePost()
   setTextColor('exptext', 'b5fc7c')
 
 
-  makeLuaText('shitscore', 'Score: 0 | Misses: 0 | Accuracy: ??.??% [?]', screenWidth, 0, baseCoords[2] + (downscroll and 130 or -120))
+  makeLuaText('shitscore', 'Score: 0 | Misses: 0 | Accuracy: ??.??% [?]', screenWidth, 0, baseCoords[2] + (downscroll and 130 or -90))
   setTextFont('shitscore', 'Minecraftia.ttf')
   setTextSize('shitscore', 18)
   setTextAlignment('shitscore', 'center')

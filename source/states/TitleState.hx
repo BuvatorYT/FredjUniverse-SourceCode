@@ -45,8 +45,9 @@ class TitleState extends MusicBeatState
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
 	var ngSpr:FlxSprite;
+	var KFLogo:FlxSprite;
 	
-	var titleTextColors:Array<FlxColor> = [0xFF33FFFF, 0xFF3333CC];
+	var titleTextColors:Array<FlxColor> = [0xFFFF33DD, 0xFF3333CC];
 	var titleTextAlphas:Array<Float> = [1, .64];
 
 	var curWacky:Array<String> = [];
@@ -312,6 +313,13 @@ class TitleState extends MusicBeatState
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = ClientPrefs.data.antialiasing;
 
+		KFLogo = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('KikillusFamily_Logo')); 
+		add(KFLogo);
+		KFLogo.visible = false;
+		KFLogo.updateHitbox();
+		KFLogo.screenCenter(X);
+		KFLogo.antialiasing = ClientPrefs.data.antialiasing;
+
 		if (initialized)
 			skipIntro();
 		else
@@ -547,35 +555,61 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					createCoolText(['Fredj Universe by', 'Kikilus Family'], 45);
+					createCoolText(['Fredj Universe by'], 45);
 				case 3:
-					addMoreText('Presents', 45);
+					KFLogo.visible = true;
 				case 4:
-
-				case 5:
 					deleteCoolText();
+					KFLogo.visible = false;
+				case 5:
+					addMoreText('Presents', 45);
 				case 6:
-					createCoolText(['In association', 'with'], -40);
+
+				case 7:
+					deleteCoolText();
 				case 8:
+
+				case 9:
+					createCoolText(['In association', 'with'], -40);
+				case 10:
 					addMoreText('FredjGrief', -40);
 					ngSpr.visible = true;
-				case 9:
+				case 11:
 					deleteCoolText();
 					ngSpr.visible = false;
-				case 10:
-					createCoolText([curWacky[0]]);
-				case 12:
-					addMoreText(curWacky[1]);
 				case 13:
-					deleteCoolText();
-				case 14:
-					addMoreText('Friday');
+					createCoolText(['maybe not', 'the best modification'], -40);
 				case 15:
+					addMoreText('but one of the geniuses', -40);
+				case 17:
+					deleteCoolText();
+				case 18:
+					createCoolText(['Its the best'], -45);
+				case 19:
+					addMoreText('thing I ve ever done.', -40);
+				case 20:
+					addMoreText('real', -40);
+				case 21:
+					deleteCoolText();
+				case 23:
+					createCoolText([curWacky[0]]);
+                case 24:
+					addMoreText(curWacky[1]);
+				case 25:
+					deleteCoolText();
+				case 28:
+					deleteCoolText();
+				case 29:
+					addMoreText('Friday');
+				case 30:
 					addMoreText('Night');
-				case 16:
+				case 31:
 					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
 
-				case 17:
+				case 32:
+					deleteCoolText();
+					createCoolText(['Fredj', 'Universe']);
+				case 33:
 					skipIntro();
 			}
 		}

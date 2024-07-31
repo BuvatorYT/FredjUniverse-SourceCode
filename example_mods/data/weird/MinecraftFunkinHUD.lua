@@ -90,13 +90,6 @@ function onCreatePost()
   screenCenter('bossbarfill', 'x')
   setProperty('bossbarfill.visible', false)
 
-  makeLuaText('bossbarname', songName..'', screenWidth, 0, (downscroll and screenHeight - 55 or -5))
-  setTextFont('bossbarname', 'Minecraftia.ttf')
-  setTextSize('bossbarname', 18)
-  addLuaText('bossbarname')
-  screenCenter('bossbarname', 'x')
-  setProperty('bossbarname.visible', false)
-
 
   local heartoffset = 135
   basehearty = baseCoords[2] - 18

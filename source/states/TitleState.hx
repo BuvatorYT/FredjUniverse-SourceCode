@@ -18,7 +18,7 @@ import shaders.ColorSwap;
 
 import states.StoryMenuState;
 import states.OutdatedState;
-import states.MainMenuState;
+import states.MainMenuFredj;
 
 typedef TitleData =
 {
@@ -97,7 +97,7 @@ class TitleState extends MusicBeatState
 			http.onData = function (data:String)
 			{
 				updateVersion = data.split('\n')[0].trim();
-				var curVersion:String = MainMenuState.psychEngineVersion.trim();
+				var curVersion:String = MainMenuFredj.psychEngineVersion.trim();
 				trace('version online: ' + updateVersion + ', your version: ' + curVersion);
 				if(updateVersion != curVersion) {
 					trace('versions arent matching!');
@@ -423,7 +423,7 @@ class TitleState extends MusicBeatState
 					if (mustUpdate) {
 						LoadingState.loadAndSwitchState(new OutdatedState());
 					} else {
-						LoadingState.loadAndSwitchState(new MainMenuState());
+						LoadingState.loadAndSwitchState(new MainMenuFredj());
 					}
 					closedState = true;
 				});

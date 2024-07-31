@@ -1,0 +1,2 @@
+Value 1: Health to tween towards
+Value 2: The time it takes!

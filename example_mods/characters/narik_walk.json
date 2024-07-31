@@ -1,14 +1,13 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-9
 			],
+			"loop": false,
+			"fps": 30,
 			"anim": "danceLeft",
-			"fps": 30,
-			"name": "nk idleL",
 			"indices": [
 				30,
 				0,
@@ -33,17 +32,17 @@
 				19,
 				20,
 				21
-			]
+			],
+			"name": "nk idleL"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-9
 			],
-			"anim": "danceRight",
+			"loop": false,
 			"fps": 30,
-			"name": "nk idleR",
+			"anim": "danceRight",
 			"indices": [
 				30,
 				0,
@@ -68,51 +67,52 @@
 				19,
 				20,
 				21
-			]
+			],
+			"name": "nk idleR"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-19
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 30,
-			"name": "nk left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "nk left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-20
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 30,
-			"name": "nk right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "nk right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				4
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 30,
-			"name": "nk up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "nk up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-20
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 30,
-			"name": "nk down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "nk down"
 		}
 	],
 	"vocals_file": "",
@@ -122,12 +122,12 @@
 		0,
 		0
 	],
-	"healthicon": "face",
+	"healthicon": "narik",
 	"flip_x": true,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		255,
+		157,
+		156
 	],
 	"camera_position": [
 		-110,

@@ -42,14 +42,14 @@ class CreditsState extends MusicBeatState
 			['FredjUniverse Dev'],
 			['Buvator',			'buvator',		'Director, 3D Animation, Coder, Charter, Source Code',  'https://www.youtube.com/channel/UCkH1tfum70ntbf1g1-y3y7Q',  	'9b2d30'],
 			['Kikillus',		'kikillus',		'Composer',					 							'https://www.youtube.com/@kikillus',							'7bb35d'],
+			['Kricass',			'kricoss',		'Artist and Composer',										'https://www.youtube.com/@Kricass_official',					'a4a4a4'],
 			['Mr. Chaos',		'chaoss',		'Source Code',					 						'https://www.youtube.com/channel/UCTNBIOrzz1HuH9fDQhFFa-A',		'f2f3f4'],
-			['Purray',			'face',			'Composer',					 							'https://www.youtube.com/@purray_fnf',							'433e78'],
 			['Tempus',			'face',			'Composer',					 							'https://www.youtube.com/@Tempus_839_OG',						'4f7942'],
 			['Funny Cat',		'funny-cat',	'Charter',					 							'https://www.youtube.com/watch?v=W4xDKTQLuPM',					'556b2f'],
 			['Striki',		'striki',	'Icon Artist',					 							'',					'ffa500'],
 			[''],
 			['Special Thanks'],
-			['Kricass',			'kricoss',		'Ex-Artist and Ex-Composer',										'https://www.youtube.com/@Kricass_official',					'a4a4a4'],
+			['Purray',			'face',			'Ex-Composer',					 							'https://www.youtube.com/@purray_fnf',							'433e78'],
 			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer and Head of Psych Engine',					 'https://ko-fi.com/shadowmario',		'444444'],
@@ -194,7 +194,7 @@ class CreditsState extends MusicBeatState
 					colorTween.cancel();
 				}
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new MainMenuState());
+				MusicBeatState.switchState(new MainMenuFredj());
 				quitting = true;
 			}
 		}

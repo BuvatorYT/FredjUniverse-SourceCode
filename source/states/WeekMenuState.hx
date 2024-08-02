@@ -7,6 +7,9 @@ import backend.Song;
 import flixel.FlxBasic;
 import flixel.FlxG;
 import flixel.FlxSprite;
+
+import flixel.addons.display.FlxBackdrop;
+
 import backend.Song;
 
 import states.PlayState;
@@ -21,6 +24,10 @@ import flixel.effects.FlxFlicker;
 class WeekMenuState extends MusicBeatState
 {
     var bg:FlxSprite;
+
+    var bgdots:FlxBackdrop = new FlxBackdrop(Paths.image('other/pause/WhiteDotBg'));
+    var bggradient:FlxSprite = new FlxSprite();
+
     var week1:FlxSprite;
     var week3:FlxSprite;
     var demo:FlxSprite;
@@ -33,9 +40,39 @@ class WeekMenuState extends MusicBeatState
 
     override function create()
     {
+
+        Conductor.bpm = TitleState.titleJSON.bpm;
+		persistentUpdate = true;
+
         bg = new FlxSprite(0,0).loadGraphic(Paths.image("other/WeekMenu/bgg"));
         bg.antialiasing = FlxG.save.data.antialiasing;
         add(bg);
+        
+		bgdots.velocity.set(-20, -20);
+		bgdots.antialiasing = ClientPrefs.data.antialiasing;
+		bgdots.alpha = 0.4;
+		add(bgdots);
+
+		bggradient.loadGraphic(Paths.image('other/pause/GradientBG'));
+		bggradient.antialiasing = ClientPrefs.data.antialiasing;
+		bggradient.alpha = 0.25;
+		add(bggradient);
+
+        var line1:FlxSprite = new FlxSprite();
+		line1.antialiasing = ClientPrefs.data.antialiasing;
+		line1.makeGraphic(1500, 100, FlxColor.BLACK);
+		line1.y -= 35; // 50
+		line1.x -= 200;
+		line1.angle = 2.7;
+		
+		var line2:FlxSprite = new FlxSprite();
+		line2.antialiasing = ClientPrefs.data.antialiasing;
+		line2.makeGraphic(1500, 200, FlxColor.BLACK);
+		line2.y += 640; // 670
+		line2.x -= 200;
+		line2.angle = 2.7;
+		add(line1);
+		add(line2);
 
         demo = new FlxSprite(0,0).loadGraphic(Paths.image("other/WeekMenu/demo"));
         demo.antialiasing = FlxG.save.data.antialiasing;
@@ -48,7 +85,7 @@ class WeekMenuState extends MusicBeatState
 
         for (i in 0...shit.length)
             {
-                var offset:Float = 108 - (Math.max(shit.length, 4) - 4) * 80;
+                var offset:Float = 108 - (Math.max(shit.length, 4) - 4) * 90;
                 var menuItem:FlxSprite = new FlxSprite(0, (i * 140) + offset);
                 menuItem.antialiasing = ClientPrefs.data.antialiasing;
                 menuItem.frames = Paths.getSparrowAtlas('other/WeekMenu/items');
@@ -69,16 +106,39 @@ class WeekMenuState extends MusicBeatState
                 {
                     case 0:
                         menuItem.setPosition(0.0);
+                        menuItem.y =- 30;
                     case 1:
                         menuItem.setPosition(0,0);
+                        menuItem.y =- 30;
                 }
             }
 
         super.create();
     }
 
+    override function beatHit()
+		{
+	
+			if(curBeat %2 == 0)
+				FlxG.camera.zoom += 0.025;
+				
+			super.beatHit();
+		}
+
     override function update(elapsed:Float)
         {
+
+            if (FlxG.sound.music != null)
+                Conductor.songPosition = FlxG.sound.music.time;
+
+            FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.045);
+
+            #if debug
+            FlxG.watch.addQuick("secShit", curSection);
+            FlxG.watch.addQuick("beatShit", curBeat);
+            FlxG.watch.addQuick("stepShit", curStep);
+            #end
+
             if (controls.BACK){
                 FlxG.sound.play(Paths.sound('cancelMenu'));
                 MusicBeatState.switchState(new MainMenuFredj());

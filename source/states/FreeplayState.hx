@@ -10,6 +10,9 @@ import objects.MusicPlayer;
 import substates.GameplayChangersSubstate;
 import substates.ResetScoreSubState;
 
+import states.TitleState;
+import flixel.addons.display.FlxBackdrop;
+
 import flixel.math.FlxMath;
 
 class FreeplayState extends MusicBeatState
@@ -30,9 +33,6 @@ class FreeplayState extends MusicBeatState
 	var intendedScore:Int = 0;
 	var intendedRating:Float = 0;
 
-	public static var isStoryMode:Bool = false;
-	public static var isWeekMode:Bool = false;
-
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
 
@@ -50,13 +50,17 @@ class FreeplayState extends MusicBeatState
 	var bottomBG:FlxSprite;
 
 	var player:MusicPlayer;
+	var songBox:FlxSprite;
 
 	override function create()
 	{
-		//Paths.clearStoredMemory();
-		//Paths.clearUnusedMemory();
-		
+		Paths.clearStoredMemory();
+		ClientPrefs.loadPrefs();
+		// CAMERA
+
+		Conductor.bpm = TitleState.titleJSON.bpm;
 		persistentUpdate = true;
+
 		PlayState.isStoryMode = false;
 		WeekData.reloadWeekFiles(false);
 
@@ -96,14 +100,51 @@ class FreeplayState extends MusicBeatState
 		add(bg);
 		bg.screenCenter();
 
+		var bgdots:FlxBackdrop = new FlxBackdrop(Paths.image('other/pause/WhiteDotBg'));
+		bgdots.velocity.set(-20, -20);
+		bgdots.antialiasing = ClientPrefs.data.antialiasing;
+		bgdots.alpha = 0.4;
+		add(bgdots);
+
+		var bggradient:FlxSprite = new FlxSprite();
+		bggradient.loadGraphic(Paths.image('other/pause/GradientBG'));
+		bggradient.antialiasing = ClientPrefs.data.antialiasing;
+		bggradient.alpha = 0.5;
+		add(bggradient);
+
+		var line1:FlxSprite = new FlxSprite();
+		line1.antialiasing = ClientPrefs.data.antialiasing;
+		line1.makeGraphic(1500, 100, FlxColor.BLACK);
+		line1.y -= 25;
+		line1.x -= 200;
+		line1.angle = 2.7;
+		
+		var line2:FlxSprite = new FlxSprite();
+		line2.antialiasing = ClientPrefs.data.antialiasing;
+		line2.makeGraphic(1500, 200, FlxColor.BLACK);
+		line2.y += 650;
+		line2.x -= 200;
+		line2.angle = 2.7;
+
+		songBox = new FlxSprite(0, 0).makeGraphic(1500, 160, 0xFF000000);
+		songBox.antialiasing = ClientPrefs.data.antialiasing;
+
+		songBox.alpha = 0.5;
+
+		add(songBox);
+
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(90, 320, songs[i].songName, true);
+
+			var songText:Alphabet = new Alphabet(120, 340, songs[i].songName, true);
 			songText.targetY = i;
 			grpSongs.add(songText);
+
+			songBox.x = songText.x - 120;
+			songBox.y = songText.y - 40;
 
 			songText.scaleX = Math.min(1, 980 / songText.width);
 			songText.snapToPosition();
@@ -111,7 +152,13 @@ class FreeplayState extends MusicBeatState
 			Mods.currentModDirectory = songs[i].folder;
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
 			icon.sprTracker = songText;
+			icon.scale.set(0.9, 0.9);
+			icon.y -= 120;
 
+			var songSelect:Alphabet = new Alphabet(90, 320, "> ", true);
+			songSelect.x = songText.x - 80;
+			songSelect.y = songText.y;
+			add(songSelect);
 			
 			// too laggy with a lot of songs, so i had to recode the logic for it
 			songText.visible = songText.active = songText.isMenuItem = false;
@@ -121,11 +168,15 @@ class FreeplayState extends MusicBeatState
 			iconArray.push(icon);
 			add(icon);
 
-			// songText.x += 40;
+			songText.x += 120;
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-			// songText.screenCenter(X);
+			songText.screenCenter(Y);
 		}
 		WeekData.setDirectoryFromWeek();
+
+		// Lines
+		add(line1);
+		add(line2);
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
 		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
@@ -179,6 +230,15 @@ class FreeplayState extends MusicBeatState
 		super.create();
 	}
 
+	override function beatHit()
+		{
+	
+			if(curBeat %2 == 0)
+				FlxG.camera.zoom += 0.025;
+				
+			super.beatHit();
+		}
+
 	override function closeSubState() {
 		changeSelection(0, false);
 		persistentUpdate = true;
@@ -200,10 +260,22 @@ class FreeplayState extends MusicBeatState
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
+        if (FlxG.sound.music != null)
+            Conductor.songPosition = FlxG.sound.music.time;
+
 		if (FlxG.sound.music.volume < 0.7)
-		{
-			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
-		}
+            {
+                FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+            }
+
+		FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.045);
+
+		#if debug
+		FlxG.watch.addQuick("secShit", curSection);
+		FlxG.watch.addQuick("beatShit", curBeat);
+		FlxG.watch.addQuick("stepShit", curStep);
+		#end
+
 		lerpScore = Math.floor(FlxMath.lerp(intendedScore, lerpScore, Math.exp(-elapsed * 24)));
 		lerpRating = FlxMath.lerp(intendedRating, lerpRating, Math.exp(-elapsed * 12));
 

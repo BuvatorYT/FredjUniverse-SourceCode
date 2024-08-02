@@ -56,6 +56,20 @@ class MainMenuFredj extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
+		var line1:FlxSprite = new FlxSprite();
+		line1.antialiasing = ClientPrefs.data.antialiasing;
+		line1.makeGraphic(1500, 100, FlxColor.BLACK);
+		line1.y -= 50;
+		line1.x -= 200;
+		line1.angle = 2.7;
+		
+		var line2:FlxSprite = new FlxSprite();
+		line2.antialiasing = ClientPrefs.data.antialiasing;
+		line2.makeGraphic(1500, 200, FlxColor.BLACK);
+		line2.y += 670;
+		line2.x -= 200;
+		line2.angle = 2.7;
+
 		for (i in 0...optionShit.length)
 		{
 			var menuItem:FlxSprite = new FlxSprite(0,0);
@@ -73,11 +87,14 @@ class MainMenuFredj extends MusicBeatState
 			menuItem.screenCenter(X);
 		}
 
-		var psychVer:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
+		add(line1);
+		add(line2);
+
+		var psychVer:FlxText = new FlxText(12, FlxG.height - 48, 0, "Psych Engine v" + psychEngineVersion, 12);
 		psychVer.scrollFactor.set();
 		psychVer.setFormat("Minecraftia Regular", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(psychVer);
-		var fnfVer:FlxText = new FlxText(12, FlxG.height - 24, 0, "FredjUniverse v1.1", 12);
+		var fnfVer:FlxText = new FlxText(12, FlxG.height - 28, 0, "FredjUniverse v1.1", 12);
 		fnfVer.scrollFactor.set();
 		fnfVer.setFormat("Minecraftia Regular", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(fnfVer);

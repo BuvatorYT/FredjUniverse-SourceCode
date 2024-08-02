@@ -11,6 +11,7 @@ import flixel.util.FlxStringUtil;
 import states.StoryMenuState;
 import states.WeekMenuState;
 import states.FreeplayState;
+import states.PlayState;
 import options.OptionsState;
 
 class PauseSubState extends MusicBeatSubstate
@@ -78,9 +79,14 @@ class PauseSubState extends MusicBeatSubstate
 		bg.scrollFactor.set();
 		add(bg);
 
-		var pauseImage:FlxSprite = new FlxSprite().loadGraphic(Paths.image('other/pauce_menuy'));
+		var pauseImage1:String = 'other/pauce_menuy';
+		var pauseImage2:String = 'other/big-bon';
+		var pauseImage4:String = 'other/ranaldo_bomj';
+
+		var pauseImage:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image(pauseImage1));
 		pauseImage.updateHitbox();
 		pauseImage.scrollFactor.set();
+
 		pauseImage.x = 290;
 		add(pauseImage);
 
@@ -102,18 +108,19 @@ class PauseSubState extends MusicBeatSubstate
 		pauseImage4.x = 290;
 		// add(pauseImage4);
 
+		pauseImage.x = 0;
 
 		var levelInfo:FlxText = new FlxText(20, 15, 0, PlayState.SONG.song, 32);
 		levelInfo.scrollFactor.set();
 		levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
 		levelInfo.updateHitbox();
-		// add(levelInfo);
+		add(levelInfo);
 
 		var levelDifficulty:FlxText = new FlxText(20, 15 + 32, 0, Difficulty.getString().toUpperCase(), 32);
 		levelDifficulty.scrollFactor.set();
 		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
 		levelDifficulty.updateHitbox();
-		// add(levelDifficulty);
+		add(levelDifficulty);
 
 		var blueballedTxt:FlxText = new FlxText(20, 15 + 64, 0, "Blueballed: " + PlayState.deathCounter, 32);
 		blueballedTxt.scrollFactor.set();
@@ -142,7 +149,7 @@ class PauseSubState extends MusicBeatSubstate
 		// Alpha 
 
 		bg.alpha = 0;
-		pauseImage.alpha = 0;
+		pauseImage.alpha = 1;
 		blueballedTxt.alpha = 0;
 		levelDifficulty.alpha = 0;
 		levelInfo.alpha = 0;
@@ -150,6 +157,26 @@ class PauseSubState extends MusicBeatSubstate
 		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
 		blueballedTxt.x = FlxG.width - (blueballedTxt.width + 20);
+
+		// if (PlayState.SONG.song == 'big-business' || PlayState.SONG.song == 'loan' || PlayState.SONG.song == 'trap')
+		// 	{
+		// 		pauseImage.loadGraphic(Paths.image(pauseImage2));
+		// 	}
+		
+		// if (PlayState.SONG.song.toLowerCase() == 'Weird')
+		// 	{
+		// 		pauseImage.loadGraphic(Paths.image(pauseImage1));
+		// 	}
+
+		// if (PlayState.SONG.song == 'camp')
+		// 	{
+		// 		pauseImage.loadGraphic(Paths.image(pauseImage4));
+		// 	}
+
+		// if (PlayState.SONG.song.toLowerCase() == 'Betrayal')
+		// 	{
+		// 		pauseImage.loadGraphic(Paths.image('other/Bomj'));
+		// 	}
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
 		FlxTween.tween(pauseImage, {alpha: 1, x: 40}, 0.6, {ease: FlxEase.quartInOut, startDelay: 0.3});

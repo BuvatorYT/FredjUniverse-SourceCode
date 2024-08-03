@@ -18,7 +18,6 @@ import shaders.ColorSwap;
 
 import states.StoryMenuState;
 import states.OutdatedState;
-import states.MainMenuFredj;
 
 typedef TitleData =
 {
@@ -423,7 +422,7 @@ class TitleState extends MusicBeatState
 					if (mustUpdate) {
 						LoadingState.loadAndSwitchState(new OutdatedState());
 					} else {
-						LoadingState.loadAndSwitchState(new MainMenuFredj());
+						LoadingState.loadAndSwitchState(new MainMenuState());
 					}
 					closedState = true;
 				});

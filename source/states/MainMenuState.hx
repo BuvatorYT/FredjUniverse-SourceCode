@@ -30,9 +30,11 @@ class MainMenuState extends MusicBeatState
 	var transGradient:FlxSprite;
    
     var optionShit:Array<String> = [
+        'story_mode',
         'freeplay',
+        'credits',
         'options',
-        'credits'
+        
     ];
 
     var camFollow:FlxObject;
@@ -49,6 +51,9 @@ class MainMenuState extends MusicBeatState
         DiscordClient.changePresence("In the Menus", null);
         #end
 
+        Conductor.bpm = TitleState.titleJSON.bpm;
+		persistentUpdate = true;
+
         camGame = new FlxCamera();
         camAchievement = new FlxCamera();
         camAchievement.bgColor.alpha = 0;
@@ -63,7 +68,7 @@ class MainMenuState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite();
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 
-		bg.loadGraphic(Paths.image('MainMenu/BG'));
+		bg.loadGraphic(Paths.image('other/MainMenu/BG'));
 
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
@@ -73,7 +78,7 @@ class MainMenuState extends MusicBeatState
 		transGradient.updateHitbox();
 		transGradient.x += 670;
 		transGradient.screenCenter(Y);
-		add(transGradient);
+		// add(transGradient);
 		
 		var line1:FlxSprite = new FlxSprite();
 		line1.antialiasing = ClientPrefs.data.antialiasing;
@@ -95,43 +100,62 @@ class MainMenuState extends MusicBeatState
         var scale:Float = 1;
 
         // UI CODE!
+
         
         for (i in 0...optionShit.length)
 		{
 			var menuItem:FlxSprite = new FlxSprite(30 + (10 * i), 50);
-			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
+			menuItem.frames = Paths.getSparrowAtlas('other/MainMenu/buttom/fredj-' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
+			menuItem.animation.addByPrefix('selected', optionShit[i] + " sel", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			FlxTween.tween(menuItem, {y: 30}, 1.2, {ease: FlxEase.quartInOut, type: FlxTween.PINGPONG});
-			menuItems.add(menuItem);
+            menuItem.y -= 30;
+            menuItem.x -= 20;
+			// FlxTween.tween(menuItem, {y: 30}, 1.2, {ease: FlxEase.quartInOut, type: FlxTween.PINGPONG});
+            menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = ClientPrefs.data.antialiasing;
-			menuItem.scale.set(0.8, 0.8);
+			menuItem.scale.set(0.9, 0.9);
 			menuItem.updateHitbox();
 
 			switch(i)
 		    {
 				case 0:
-					menuItem.x = 840;
-					menuItem.y = 140;
+					// menuItem.x = 840;
+					// menuItem.y = 140;
 					menuItem.updateHitbox();
 
 				case 1:
-					menuItem.x = 840; // 775
-					menuItem.y = 320;
+					menuItem.x -= 20; // 775
+					// menuItem.y = 320;
 					menuItem.updateHitbox();
 
 				case 2:
-					menuItem.x = 840; // 750
-					menuItem.y = 500;
+					menuItem.x -= 30; // 750
+					// menuItem.y = 500;
+					menuItem.updateHitbox();
+
+				case 3:
+					menuItem.x -= 40; // 750
+					// menuItem.y = 500;
 					menuItem.updateHitbox();
 
 				default:
-					menuItem.screenCenter();
+					// menuItem.screenCenter();
+                    menuItem.updateHitbox();
 			}
 		}
+
+         // Ping-Pong Function Menu
+
+         menuItems.forEach(function(spr:FlxSprite)
+             {
+                 FlxTween.tween(spr, {y: spr.y + 20}, 1.6, 
+                     {ease: FlxEase.quadInOut,
+                         type: PINGPONG,
+                         startDelay: 0.1});
+             });
 
 		// Lines
 
@@ -156,6 +180,18 @@ class MainMenuState extends MusicBeatState
 
     override function update(elapsed:Float)
     {
+
+        if (FlxG.sound.music != null)
+            Conductor.songPosition = FlxG.sound.music.time;
+
+        FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.025);
+
+        #if debug
+        FlxG.watch.addQuick("secShit", curSection);
+        FlxG.watch.addQuick("beatShit", curBeat);
+        FlxG.watch.addQuick("stepShit", curStep);
+        #end
+
         if (FlxG.sound.music.volume < 0.8)
         {
             FlxG.sound.music.volume += 0.5 * elapsed;
@@ -218,7 +254,7 @@ class MainMenuState extends MusicBeatState
                                 switch (daChoice)
                                 {
                                     case 'story_mode':
-                                        LoadingState.loadAndSwitchState(new StoryMenuState());
+                                        LoadingState.loadAndSwitchState(new WeekMenuState());
                                     case 'freeplay':
                                         LoadingState.loadAndSwitchState(new FreeplayState());
                                     case 'credits':

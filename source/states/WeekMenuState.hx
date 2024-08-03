@@ -51,7 +51,7 @@ class WeekMenuState extends MusicBeatState
 		bgdots.velocity.set(-20, -20);
 		bgdots.antialiasing = ClientPrefs.data.antialiasing;
 		bgdots.alpha = 0.4;
-		add(bgdots);
+		// add(bgdots);
 
 		bggradient.loadGraphic(Paths.image('other/pause/GradientBG'));
 		bggradient.antialiasing = ClientPrefs.data.antialiasing;
@@ -131,7 +131,7 @@ class WeekMenuState extends MusicBeatState
             if (FlxG.sound.music != null)
                 Conductor.songPosition = FlxG.sound.music.time;
 
-            FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.045);
+            FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.025);
 
             #if debug
             FlxG.watch.addQuick("secShit", curSection);
@@ -141,7 +141,7 @@ class WeekMenuState extends MusicBeatState
 
             if (controls.BACK){
                 FlxG.sound.play(Paths.sound('cancelMenu'));
-                MusicBeatState.switchState(new MainMenuFredj());
+                MusicBeatState.switchState(new MainMenuState());
             }
             if (controls.UI_LEFT_P)
                 changeItem(-1);

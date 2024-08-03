@@ -95,16 +95,16 @@ class FreeplayState extends MusicBeatState
 		}
 		Mods.loadTopMod();
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg = new FlxSprite().loadGraphic(Paths.image('other/MainMenu/BG'));
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 		add(bg);
 		bg.screenCenter();
 
-		var bgdots:FlxBackdrop = new FlxBackdrop(Paths.image('other/pause/WhiteDotBg'));
-		bgdots.velocity.set(-20, -20);
-		bgdots.antialiasing = ClientPrefs.data.antialiasing;
-		bgdots.alpha = 0.4;
-		add(bgdots);
+		// var bgdots:FlxBackdrop = new FlxBackdrop(Paths.image('title/WhiteDotBg'));
+		// bgdots.velocity.set(-20, -20);
+		// bgdots.antialiasing = ClientPrefs.data.antialiasing;
+		// bgdots.alpha = 0.4;
+		// add(bgdots);
 
 		var bggradient:FlxSprite = new FlxSprite();
 		bggradient.loadGraphic(Paths.image('other/pause/GradientBG'));
@@ -153,7 +153,7 @@ class FreeplayState extends MusicBeatState
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
 			icon.sprTracker = songText;
 			icon.scale.set(0.9, 0.9);
-			icon.y -= 120;
+			icon.y -= 160;
 
 			var songSelect:Alphabet = new Alphabet(90, 320, "> ", true);
 			songSelect.x = songText.x - 80;
@@ -204,7 +204,6 @@ class FreeplayState extends MusicBeatState
 		add(missingText);
 
 		if(curSelected >= songs.length) curSelected = 0;
-		bg.color = songs[curSelected].color;
 		intendedColor = bg.color;
 		lerpSelected = curSelected;
 
@@ -234,7 +233,7 @@ class FreeplayState extends MusicBeatState
 		{
 	
 			if(curBeat %2 == 0)
-				FlxG.camera.zoom += 0.025;
+				FlxG.camera.zoom += 0.015;
 				
 			super.beatHit();
 		}
@@ -268,7 +267,7 @@ class FreeplayState extends MusicBeatState
                 FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
             }
 
-		FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.045);
+		FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.015);
 
 		#if debug
 		FlxG.watch.addQuick("secShit", curSection);
@@ -377,7 +376,7 @@ class FreeplayState extends MusicBeatState
 					colorTween.cancel();
 				}
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new MainMenuFredj());
+				MusicBeatState.switchState(new MainMenuState());
 			}
 		}
 

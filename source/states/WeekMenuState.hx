@@ -113,6 +113,14 @@ class WeekMenuState extends MusicBeatState
                 }
             }
 
+            menuItems.forEach(function(spr:FlxSprite)
+                {
+                    FlxTween.tween(spr, {y: spr.y + 10}, 1.6, 
+                        {ease: FlxEase.quadInOut,
+                            type: PINGPONG,
+                            startDelay: 0.1});
+                });
+
         super.create();
     }
 
@@ -120,7 +128,8 @@ class WeekMenuState extends MusicBeatState
 		{
 	
 			if(curBeat %2 == 0)
-				FlxG.camera.zoom += 0.025;
+                return;
+				// FlxG.camera.zoom += 0.025;
 				
 			super.beatHit();
 		}
@@ -131,7 +140,7 @@ class WeekMenuState extends MusicBeatState
             if (FlxG.sound.music != null)
                 Conductor.songPosition = FlxG.sound.music.time;
 
-            FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.025);
+            FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, 0.045);
 
             #if debug
             FlxG.watch.addQuick("secShit", curSection);

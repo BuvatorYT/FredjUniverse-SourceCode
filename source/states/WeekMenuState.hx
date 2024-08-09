@@ -184,7 +184,6 @@ class WeekMenuState extends MusicBeatState
                         PlayState.campaignMisses = 0;
                         PlayState.isWeekMode = true;
                         FreeplayState.destroyFreeplayVocals();
-                    
                     }
                     
                     if (curSelected == 1) {

@@ -641,6 +641,8 @@ class PlayState extends MusicBeatState
 		cacheCountdown();
 		cachePopUpScore();
 
+		curImage();
+
 		super.create();
 		Paths.clearUnusedMemory();
 
@@ -661,6 +663,28 @@ class PlayState extends MusicBeatState
 		noteKillOffset = Math.max(Conductor.stepCrochet, 350 / songSpeed * playbackRate);
 		return value;
 	}
+
+	public function curImage(){
+
+		if (songName == 'big-business' || songName == "loan" || songName == "trap"){
+			PauseSubState.curImage = 1;
+		}
+
+		if (songName == "weird"){
+			PauseSubState.curImage = 2;
+		}
+
+		if (songName == "camp"){
+			PauseSubState.curImage = 3;
+		}
+
+		if (songName == "betrayal"){
+			PauseSubState.curImage = 4;
+		}
+
+	}
+
+
 
 	function set_playbackRate(value:Float):Float
 	{

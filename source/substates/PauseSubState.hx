@@ -23,6 +23,8 @@ class PauseSubState extends MusicBeatSubstate
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
+	public static var curImage:Int = 0;
+
 	var pauseMusic:FlxSound;
 	var practiceText:FlxText;
 	var skipTimeText:FlxText;
@@ -158,28 +160,29 @@ class PauseSubState extends MusicBeatSubstate
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
 		blueballedTxt.x = FlxG.width - (blueballedTxt.width + 20);
 
-		// if (PlayState.SONG.song == 'big-business' || PlayState.SONG.song == 'loan' || PlayState.SONG.song == 'trap')
-		// 	{
-		// 		pauseImage.loadGraphic(Paths.image(pauseImage2));
-		// 	}
+		if (curImage == 1 )
+			{
+				pauseImage.loadGraphic(Paths.image('other/big-bon'));
+			}
 		
-		// if (PlayState.SONG.song.toLowerCase() == 'Weird')
-		// 	{
-		// 		pauseImage.loadGraphic(Paths.image(pauseImage1));
-		// 	}
+		if (curImage == 2)
+			{
+				pauseImage.loadGraphic(Paths.image('other/pauce_menuy'));
+			}
 
-		// if (PlayState.SONG.song == 'camp')
-		// 	{
-		// 		pauseImage.loadGraphic(Paths.image(pauseImage4));
-		// 	}
+		if (curImage == 3)
+			{
+				pauseImage.loadGraphic(Paths.image('other/ranaldo_bomj'));
+			}
 
-		// if (PlayState.SONG.song.toLowerCase() == 'Betrayal')
-		// 	{
-		// 		pauseImage.loadGraphic(Paths.image('other/Bomj'));
-		// 	}
+		if (curImage == 4)
+			{
+				pauseImage.loadGraphic(Paths.image('other/bomj'));
+			}
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
-		FlxTween.tween(pauseImage, {alpha: 1, x: 40}, 0.6, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(pauseImage, {alpha: 1, x: -40}, 0.6, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 		FlxTween.tween(blueballedTxt, {alpha: 1, y: blueballedTxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});

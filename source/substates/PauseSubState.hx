@@ -98,13 +98,13 @@ class PauseSubState extends MusicBeatSubstate
 		pauseImage2.x = 290;
 		// add(pauseImage2);
 
-		var pauseImage3:FlxSprite = new FlxSprite().loadGraphic(Paths.image('other/Bomj'));
+		var pauseImage3:FlxSprite = new FlxSprite().loadGraphic(Paths.image('other/bomj'));
 		pauseImage3.updateHitbox();
 		pauseImage3.scrollFactor.set();
 		pauseImage3.x = 290;
 		// add(pauseImage3);
 
-		var pauseImage4:FlxSprite = new FlxSprite().loadGraphic(Paths.image('other/Ranaldo7 & Bomjik'));
+		var pauseImage4:FlxSprite = new FlxSprite().loadGraphic(Paths.image('other/ranaldo_bomj'));
 		pauseImage4.updateHitbox();
 		pauseImage4.scrollFactor.set();
 		pauseImage4.x = 290;
@@ -151,7 +151,7 @@ class PauseSubState extends MusicBeatSubstate
 		// Alpha 
 
 		bg.alpha = 0;
-		pauseImage.alpha = 1;
+		pauseImage.alpha = 0;
 		blueballedTxt.alpha = 0;
 		levelDifficulty.alpha = 0;
 		levelInfo.alpha = 0;
@@ -181,7 +181,7 @@ class PauseSubState extends MusicBeatSubstate
 			}
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
-		FlxTween.tween(pauseImage, {alpha: 1, x: -40}, 0.6, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(pauseImage, {alpha: 1, x: -40}, 0.35, {ease: FlxEase.quartInOut, startDelay: 0.15});
 		
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});

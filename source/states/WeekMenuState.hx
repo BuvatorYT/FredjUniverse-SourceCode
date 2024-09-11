@@ -182,7 +182,7 @@ class WeekMenuState extends MusicBeatState
                         PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
                         PlayState.campaignScore = 0;
                         PlayState.campaignMisses = 0;
-                        PlayState.isWeekMode = true;
+                        PlayState.isStoryMode = true;
                         FreeplayState.destroyFreeplayVocals();
                     }
                     
@@ -194,7 +194,7 @@ class WeekMenuState extends MusicBeatState
                         PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-normal', PlayState.storyPlaylist[0].toLowerCase());
                         PlayState.campaignScore = 0;
                         PlayState.campaignMisses = 0;
-                        PlayState.isWeekMode = true;
+                        PlayState.isStoryMode = true;
                         FreeplayState.destroyFreeplayVocals();
                     
                     }
